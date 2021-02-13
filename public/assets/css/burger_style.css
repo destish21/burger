@@ -1,13 +1,50 @@
-body { 
+/* body { 
 	background-image: url(/assets/images/bigkahuna3.jpg);
 	background-position: center center;
 	background-repeat:  no-repeat;
 	background-attachment: fixed;
 	background-size:  cover;
 	background-color: #000000;  
+} */
+body {
+  background-color: #FFC72C;
+}
+.display {
+  border-bottom: 2px solid gray;
+  /* border-right: 2px solid rgb(34, 33, 33); */
+  /* border-radius: 25px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.message {
+p {
+  font-size: 25px;
+  padding-top: 20px;
+  margin-bottom: 0;
+}
+
+.d3 {
+  border:  2px solid lightblue;
+  margin-top: 15px;
+}
+
+img {
+  margin-top: 50px;
+  margin-bottom: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+}
+
+
+
+
+
+
+
+/* .message {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -19,4 +56,4 @@ body {
     background-color: rgba(0,0,0,0.6);
     color: #fff;
     padding: 0.5em;
-  }
+  } */
