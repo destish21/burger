@@ -1,67 +1,35 @@
-const express = require("express");
+var express = require("express");
+var router = express.Router();
+var burger = require("../models/burger.js");
 
-const router = express.Router();
-
-// Import the model (burger.js) to use its database functions.
-const burgerModel = require("../models/burger.js");
-
-// Create all our routes and set up logic within those routes where required.
+// use express for the / route response  run the /burgers route
 router.get("/", (req, res) => {
-    // console.log('startrouter.get')
-    burgerModel.all((burgerData) => {
-        /* var hbsObject = {
-             burger: data
-         };*/
-        // console.log(burgerData);
-        res.render("index", { burgers: burgerData });
-    });
+  res.redirect("/burgers");
 });
 
-router.post("/api/burgers", (req, res) => {
-    const burger = req.body
-    console.log(burger)
-    burgerModel.insertOne(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], result => {
-        // Send back the ID of the new burgers
-        res.redirect("/");
-        // res.status(200).send();
-
-    });
+//use /burgers route to render all the data from mysql to index using hundlebars
+router.get("/burgers", (req, res) => {
+  burger.all((burgerData) => {
+    res.render("index", { burger_data: burgerData });
+  });
 });
 
-
-// router.post("/", function (req, res) {
-//     const burger = req.body
-//     console.log(burger)
-//     burger.insertOne("burger_name", burger, function(data){
-//         // Send back the ID of the new burgers
-//         res.status(200).send();
-//     });
-// });
-
-router.put("/api/burgers/:id", (req, res) => {
-    var condition = "id = " + req.params.id;
-    console.log("condition", condition);
-    burgerModel.updateOne({
-        burger: req.body.devoured
-    }, condition, result => {
-        if (result.changedRows == 0) {
-            // If no rows were changed, then the ID must not exist, so 404
-            return res.status(404).end();
-        } else {
-            res.redirect("/");
-            // res.status(200).end();
-        }
-    });
+// use the /burgers/create route to get the data submited from inputs in the browser and post it to the mysql and also redirect to the browser too
+router.post("/burgers/create", (req, res) => {
+  burger.create(req.body.burger_name, (result) => {
+    res.redirect("/");
+  });
 });
 
-router.delete("api/burgers/:id", (req, res) => {
-    const id = req.params.id
-    burgerModel.delete({ id }, result => {
-        res.status(200).end();
-        // res.redirect("/");
+// put route -> back to index
+// wrapper for orm.js that using MySQL update callback will return a log to console,
+// render back to index with handle
+// Send back response and let page reload from .then in Ajax
+router.put("/burgers/:id", (req, res) => {
+  burger.update(req.params.id, (result) => {
+    //console.log(result);
+    res.sendStatus(200);
+  });
+});
 
-    })
-})
-
-// Export routes for server.js to use.
 module.exports = router;

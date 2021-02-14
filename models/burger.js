@@ -1,42 +1,17 @@
-// Import the ORM to create functions that will interact with the database.
+//require the methods exported from orm constructor object
 var orm = require("../config/orm.js");
 
 var burger = {
-    all: (cb) => {
-        orm.selectAll("burgers",  (res) => {
-            cb(res);
-        });
-    },
-    // insertOne{}
-    // The variables cols and vals are arrays.
-    insertOne: (cols, colVals, cb) => {
-        orm.insertOne("burgers", cols, colVals, (res) => {
-            cb(res)
-        });
-    },
-    updateOne: (col, colVal, condition, cb) => {
-        orm.updateOne("burgers", col, colVal, condition, (res) => {
-            cb(res)
-        })
-    },
-    // update: function (objColVals, condition, cb) {
-    //     orm.update("burgers", objColVals, condition, function (res) {
-    //         cb(res);
-    //     });
-    // },
-    delete: (condition, cb) => {
-        console.log(condition)
-        orm.delete("burgers", condition, (data) => {
-            cb(data)
-        })
-    }
+  //from burgers table get a response of all the data
+  all: (cb) => orm.all("burgers", (res) => cb(res)),
+
+  // use burgers table burger_name column and add it to the not devoured list
+  create: (name, cb) =>
+    orm.create("burgers", ["burger_name", "devoured"], [name, false], cb),
+
+  //to update devoured pass the id of that devoured and pass that value to devored list
+  update: (id, cb) =>
+    orm.update("burgers", { devoured: true }, `id= ${id}`, cb),
 };
 
-
-// Export the database functions for the controller (catsController.js).
 module.exports = burger;
-
-
-// *`selectAll()`
-// * `insertOne()`
-// * `updateOne()`
