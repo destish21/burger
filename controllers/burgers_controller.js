@@ -21,14 +21,10 @@ router.post("/burgers/create", (req, res) => {
   });
 });
 
-// put route -> back to index
-// wrapper for orm.js that using MySQL update callback will return a log to console,
-// render back to index with handle
 // Send back response and let page reload from .then in Ajax
 router.put("/burgers/:id", (req, res) => {
   burger.update(req.params.id, (result) => {
-    //console.log(result);
-    res.sendStatus(200);
+    res.status(200).end()
   });
 });
 

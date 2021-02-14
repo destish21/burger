@@ -71,11 +71,14 @@
    * you can run by node `server.js` to burger.
 
    # screenshot Images
-   * ![burger](./Images/allETracker.png)
+   * ![burger](./public/assets/img/Screenshot1.png)
 
-   * ![burger](./Images/EByRoles&Allmanagers.png)
+   * ![burger](./public/assets/img/Screenshot2.png)
    
-   * ![burger](./Images/AllDepart&AllEbyDepart.png)
+   * ![burger](./public/assets/img/Screenshot3.png)
+
+   * ![burger](./public/assets/img/Screenshot4.png)
+
 
    ## Usage Instructions
 
@@ -114,11 +117,11 @@
 
    * Test Screenshot image 
  
-   ![burger](./Images/prompt.png)
+   ![burger](./public/assets/img/burger.jpg)
   
-   ### Click the  links to wach video  demonstration:  
+   <!-- ### Click the  links to wach video  demonstration:  
 
-   * [Watch the video ](https://drive.google.com/file/d/1rgVSVhG-DRQTNpzqhZfX6vCmG51VK1-P/view?usp=sharing)
+   * [Watch the video ](https://drive.google.com/file/d/1rgVSVhG-DRQTNpzqhZfX6vCmG51VK1-P/view?usp=sharing) -->
   
    ## Contribution
   

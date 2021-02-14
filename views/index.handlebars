@@ -1,17 +1,19 @@
 <div class="container">
+	
 	<div class="row">
 		<div class="col-md-12 text-center d1" id="top-bar">
-			<img src="./assets/img/burger.jpg" alt="">
+			<img src="./assets/img/burger.jpg" alt="burger1">
 			<br> <br> <br>
 			<h2> Eat-Da-Burger! </h2>
 			<br> <br>
 		</div>
 
-		<!-- ////////////////////////////////////////////////////// -->
+		<!-- ****************************************** -->
 		<div class="col-md-6 text-center d2 task">
 
 			<div class="row">
-				<h4 style="text-align:center;">Ordered</h4>
+				<h4>Burgers Available To Eat!</h4>
+
 				{{#each burger_data}}
 				{{#unless this.devoured}}
 				<div class="col-md-12 text-center display">
@@ -19,7 +21,7 @@
 					<p class="ab">{{this.id}}. {{this.burger_name}}</p>
 
 					<form class="devour-form button-size">
-						<input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
+						<input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
 						<button type="submit" class="btn btn-danger btn-sm">Devour it!</button>
 					</form>
 				</div>
@@ -28,7 +30,7 @@
 			</div>
 		</div>
 		<div class="col-md-6 text-center task">
-			<h4>Sold out</h4>
+			<h4>Burgers That Have Been Eaten!</h4>
 			{{#each burger_data}}
 			{{#if this.devoured}}
 			<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
