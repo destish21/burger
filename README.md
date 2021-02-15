@@ -34,9 +34,13 @@
 
    * npm install mysql
 
+   * npm handlebars
+
+   * npm method-override
+
+   * body-parser
 
    * users can quickly and easily input the names of burgers they'd like to eat.
-
 
    * Whenever a user submits a burger's name, it displays the burger on the left side of the page -- waiting to be devoured. 
 
@@ -53,7 +57,7 @@
 
    * You can View the stored burger in a database whether devoured or not.
 
-   * The app runs as a `server.js` to gather information about each order. 
+   * The app runs as a `nodemon server.js or node server.js` to gather information about each order. 
 
 
    * My burger node express handlebars application includes all necessary code that is readable, reliable, and maintainable Oftentimes, node_modules,  main Readme, screenshot images.
@@ -68,7 +72,7 @@
 
    * you can run by install npm i to include node_module, express,express-handlebars and mysql.
 
-   * you can run by node `server.js` to burger.
+   * you can run by node `nodemon server.js or by node server.js` to burger.
 
    # screenshot Images
    * ![burger](./public/assets/img/Screenshot1.png)
@@ -94,7 +98,7 @@
      in your computer.
 
    * Once in the directory run npm install to install the node_modules needed to run the app.
-    Run by  `node server.js` in your computer command line.
+    Run by  `node server.js or by nodemon server.js` in your computer command line.
 
    * You can order your burger yummy! on the application.
 
@@ -115,14 +119,10 @@
 
    * My `my burger` is in my github repository enjoy it!
 
-   * Test Screenshot image 
+   * burger logger image Referece Google
  
    ![burger](./public/assets/img/burger.jpg)
-  
-   <!-- ### Click the  links to wach video  demonstration:  
-
-   * [Watch the video ](https://drive.google.com/file/d/1rgVSVhG-DRQTNpzqhZfX6vCmG51VK1-P/view?usp=sharing) -->
-  
+    
    ## Contribution
   
    * This is Contributed by [destish21/burger](https://github.com/destish21/burger). 
@@ -132,10 +132,10 @@
    * you can contact me by Contact Information here below.
 
    ## Developers Contact Information
-   * LinkdIn Profile: [Desta Mulualem](https://www.linkedin.com/in/desta-mulualem-6718b1203/)
-   * Deployed URL :  N/A
-   * github URL:  https://github.com/destish21/burger
+   * LinkdIn Profile : [Desta Mulualem](https://www.linkedin.com/in/desta-mulualem-6718b1203/)
+   * Deployed URL : [myburger12](https://myburger12.herokuapp.com/burgers)
+   * github URL :  https://github.com/destish21/burger
 
-   * Email: destish21@yahoo.com
+   * Email : destish21@yahoo.com
    
    # Desta Mulualem. All Rights Reserved © 02/16/2021.
