@@ -121,7 +121,7 @@
 
    * burger logger image Referece Google
  
-   ![burger](./public/assets/img/burger.jpg)
+   ![burger](./public/assets/img/MyBurgerApp.png)
     
    ## Contribution
   
